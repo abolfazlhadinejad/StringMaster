@@ -5,8 +5,25 @@ public class Warmup {
      * In the first function, your inputs are a number and a sentence
      * @return is the number th word of the sentence
      */
-    public String wordFinder(String sentence, int number) {
-        return null;
+    public String wordFinder(String sentence, int number)
+    {
+        String[] arraySentence = sentence.split(" ");
+        //الان تو هر عنصر از ارایه به ترتیب کلمات وجود دارن
+        int numberOfWords = arraySentence.length;
+
+        if (number <= numberOfWords)
+        {
+            //System.out.println(arraySentence[number-1]);
+            return arraySentence[number-1];
+        }
+        else
+        {
+            //System.out.println("number %d is out Of Bound",number);
+            //System.out.print("number ");
+            //System.out.print(number);
+            //System.out.print(" is out Of Bound.");
+            return " Number = " + number + " is out Of Bound";
+        }
     }
 
     /**
@@ -16,6 +33,7 @@ public class Warmup {
      * @return if searchForEven is true ? return the number of even numbers : return the number of odd numbers
      */
     public int oddEvenCounter(String number, boolean searchForEven) {
+
         return -1;
     }
 
