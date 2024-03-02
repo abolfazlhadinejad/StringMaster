@@ -34,7 +34,48 @@ public class Warmup {
      */
     public int oddEvenCounter(String number, boolean searchForEven) {
 
-        return -1;
+        int num = Integer.parseInt(number);
+
+        int n = num;
+        int lengthOfNumber =0;
+        while (n > 0)
+        {
+            n = n / 10;
+            lengthOfNumber++;
+        }
+
+        int[] arrayHaveNumbers = new int[lengthOfNumber];
+        n = num;
+        int j = 0;
+        while ( j < lengthOfNumber )
+        {
+            arrayHaveNumbers[j] = n%10;
+            n = n/10;
+            j++;
+        }
+
+
+        int evenCount = 0;
+        int oddCount = 0;
+        for (int i = 0 ; i < lengthOfNumber ; i++)
+        {
+            if ( arrayHaveNumbers[i] % 2 == 0 )
+            {
+                evenCount++;
+            }
+            else
+            {
+                oddCount++;
+            }
+        }
+        if ( searchForEven == true )
+        {
+            return evenCount;
+        }
+        else
+        {
+            return oddCount;
+        }
     }
 
     /**
