@@ -55,8 +55,24 @@ public class Advanced {
      * @param word This input could have Consecutive repeated letters or not
      * @return if word contains Consecutive repeated letters, one of the repeated letters should be omitted
      */
-    public String doubleChar(String word) {
-        return null;
+    public String doubleChar(String word)
+    {
+        String[] arraySentence = word.split("");
+        int lengthOfArray = arraySentence.length;
+        for (int i = 1 ; i < lengthOfArray ; i++)
+        {
+            if (Objects.equals(arraySentence[i],arraySentence[i-1]))
+            {
+                arraySentence[i-1] = "";
+            }
+        }
+
+        String finalSentence = "";
+        for (int i = 0 ; i < lengthOfArray ; i++)
+        {
+            finalSentence += arraySentence[i];
+        }
+        return finalSentence;
     }
 }
 
