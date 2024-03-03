@@ -9,8 +9,34 @@ public class Advanced {
      * You have to search the sentence to find the word that you were given as input and change it with the newWord
 
      */
-    public String wordCensor(String sentence, String word, String newWord){
-        return null;
+    public String wordCensor(String sentence, String word, String newWord)
+    {
+        String[] arraySentence = sentence.split(" ");
+        int numberOfWords = arraySentence.length;
+
+        for (int i=0 ; i < numberOfWords ; i++)
+        {
+            if (arraySentence[i].equals(word))
+            {
+                arraySentence[i] = newWord;
+            }
+        }
+
+        String finalWord = "";
+        for (int j = 0 ; j < numberOfWords ; j++)
+        {
+            if (j == numberOfWords-1)
+            {
+                finalWord = finalWord + arraySentence[j];
+            }
+            else
+            {
+                finalWord = finalWord + arraySentence[j] + " ";
+            }
+
+        }
+        //finalWord = finalWord - " ";  error
+        return finalWord;
     }
 
     /**
@@ -19,7 +45,8 @@ public class Advanced {
      * @param lastName is a last name with irregular letters (example : pOtTeR)
      * @return fullName is a normal full name that just the first letter of firstName & lastName is Capitalized (example : Harry Potter)
      */
-    public String normalizingName(String firstName, String lastName){
+    public String normalizingName(String firstName, String lastName)
+    {
         return null;
     }
 
